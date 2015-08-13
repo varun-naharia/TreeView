@@ -76,9 +76,9 @@
     else
     {
         NSArray *subviews = self.superview.subviews;
-        
+        NSLog(@"%ld",(long)self.tag);
         for(UIView *view in subviews){
-            if(view.tag == self.tag){
+            if(view.tag == self.parent_id){
                 // Do something with that view
                 
                 [self.superview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[view]-(top)-[self(==height)]" options:NSLayoutFormatDirectionLeadingToTrailing metrics:metrics views:NSDictionaryOfVariableBindings(self,view)]];

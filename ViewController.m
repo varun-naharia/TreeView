@@ -43,7 +43,8 @@
     node2.category_id=5;
     node2.parent_id=2;
     node2.product_count=5;
-    node.tag=node.parent_id;
+    node.tag=node.category_id;
+    NSLog(@"%ld",(long)node.tag);
     //    /node.backgroundColor=[UIColor redColor];
     
     [self.view addSubview:node2];
