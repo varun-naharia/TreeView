@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "TreeNode.h"
+#import "TreeView.h"
 
 @interface ViewController ()
 
@@ -23,31 +24,10 @@
     cat =[dict objectForKey:@"categoriesList"];
     NSLog(@"%@",cat);
     
-    //TreeNode *node = [TreeNode buttonWithType:UIButtonTypeCustom];
-    TreeNode *node = [[TreeNode alloc] initWithFrame:CGRectMake(100, 100, 200, 40) withBackgroundColor:[UIColor clearColor]];
-    [node setTitle:@"Cart" forState:UIControlStateNormal];
+    TreeView *treeView = [[TreeView alloc] initWithFrame:CGRectMake(0, 0, 400, 800) andData:self.dict];
+    [self.view addSubview:treeView];
     
-    node.name=@"cat1";
-    node.category_id=2;
-    node.parent_id=1;
-    node.product_count=5;
-    node.tag=node.category_id;
-//    /node.backgroundColor=[UIColor redColor];
     
-    [self.view addSubview:node];
-    
-    TreeNode *node2 = [[TreeNode alloc] initWithFrame:CGRectMake(100, 100, 200, 40) withBackgroundColor:[UIColor clearColor]];
-    [node2 setTitle:@"Cart" forState:UIControlStateNormal];
-    
-    node2.name=@"cat1";
-    node2.category_id=5;
-    node2.parent_id=2;
-    node2.product_count=5;
-    node.tag=node.category_id;
-    NSLog(@"%ld",(long)node.tag);
-    //    /node.backgroundColor=[UIColor redColor];
-    
-    [self.view addSubview:node2];
     // Do any additional setup after loading the view, typically from a nib.
 }
 

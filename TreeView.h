@@ -10,4 +10,6 @@
 
 @interface TreeView : UIView
 
+-(id)initWithFrame:(CGRect)frame andData:(NSMutableDictionary *)dict;
+
 @end

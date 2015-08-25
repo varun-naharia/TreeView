@@ -23,7 +23,7 @@
     if (self) {
         // Initialization code
         [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-       
+        self.userInteractionEnabled = YES;
         [self addTarget:self action:@selector(clickme:) forControlEvents:UIControlEventTouchUpInside];
     }
     return self;
